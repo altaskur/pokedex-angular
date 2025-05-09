@@ -1,1 +1,36 @@
 /* You can add global styles to this file, and also import other style files */
+
+:root {
+
+  --radial-gradient-first: #4D0B1C;
+  --radial-gradient-second: #BC0032;
+  --radial-gradient-third: #DB1C4F;
+
+  --radial-gradient-first-stop: 0%;
+  --radial-gradient-second-stop: 61%;
+  --radial-gradient-third-stop: 100%;
+
+  --radial-gradient: radial-gradient(
+                  circle,
+                  var(--radial-gradient-first) var(--radial-gradient-first-stop),
+                  var(--radial-gradient-second) var(--radial-gradient-second-stop),
+                  var(--radial-gradient-third) var(--radial-gradient-third-stop)
+  );
+}
+
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  display: grid;
+  place-items: center;
+
+  width: 100vw;
+  height: 100vh;
+
+  background: var(--radial-gradient);
+}
