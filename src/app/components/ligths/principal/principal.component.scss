@@ -1,0 +1,106 @@
+div.principal {
+  --size: 78px;
+  --light-color-on: #00DBFD;
+  --light-color-off: #1d7f8d;
+
+  position: relative;
+  width: var(--size);
+  height: var(--size);
+  border-radius: 50%;
+  overflow: hidden;
+  box-shadow: 4px 3px 1px rgba(0, 0, 0, 0.5);
+
+  & div.inside-up {
+    width: 100%;
+    height: 50%;
+    background: #FFF;
+  }
+
+  & div.inside-down {
+    width: 100%;
+    height: 50%;
+    background: #72E0DF;
+  }
+
+  & div.light-wrapper {
+    --size: 80%;
+
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    display: grid;
+    place-items: center;
+    width: var(--size);
+    height: var(--size);
+    border-radius: 50%;
+    background: #FFF;
+    transform: translate(-50%, -50%);
+
+
+    & div.light {
+      --size: 90%;
+
+      position: relative;
+      width: var(--size);
+      height: var(--size);
+      border-radius: 50%;
+      border: 4px solid #0E0856;
+      background: var(--light-color-on);
+      overflow: hidden;
+
+      & div.light-shadow {
+        --size: 97%;
+
+        position: absolute;
+        top: 50%;
+        left: 50%;
+        width: var(--size);
+        height: var(--size);
+        border-radius: 50%;
+        background: var(--light-color-on);
+        transform: translate(-58%, -63%);
+        z-index: 1;
+      }
+
+      & div.dark-shadow {
+        --size: 84%;
+
+        position: absolute;
+        top: 50%;
+        left: 50%;
+        width: var(--size);
+        height: var(--size);
+        border-radius: 50%;
+        background: rgba(0 0 0 / 34%);
+        transform: translate(-52%, -50%);
+      }
+
+      & .reflexion {
+        --size: 22%;
+        position: absolute;
+        width: var(--size);
+        height: var(--size);
+        background: rgba(255, 255, 255, 0.16);
+        border-radius: 50%;
+        border: 1px solid rgba(255 255 255 / 28%);
+        z-index: 2;
+
+        &.top {
+          width: 29%;
+          height: 16%;
+          top: 50%;
+          left: 50%;
+          transform: translate(-128%, -219%) rotate(-40deg);
+          border-radius: 33%;
+        }
+
+        &.center {
+          top: 50%;
+          left: 50%;
+          transform: translate(-50%, -50%);
+          border-radius: 50%;
+        }
+      }
+    }
+  }
+}
