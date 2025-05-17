@@ -28,7 +28,7 @@ jobs:
 
       - name: Build Angular project
         run: |
-          npx ng build --configuration production --base-href "/"
+         ng build --configuration production --base-href "/pokedex-angular/"
 
       - name: Upload artifact
         uses: actions/upload-pages-artifact@v3
