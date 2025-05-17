@@ -36,13 +36,22 @@ jobs:
       - name: Build Angular App
         run: npx ng build --configuration production --base-href "/pokedex-angular/"
 
+      - name: Add .nojekyll file
+        run: echo "" > dist/pokedex/.nojekyll
+
+      - name: ✅ Check output directory content
+        run: ls -lah dist/pokedex
+
+      - name: ✅ Show index.html content
+        run: cat dist/pokedex/index.html || echo "❌ index.html NOT FOUND"
+
       - name: Setup Pages
         uses: actions/configure-pages@v4
 
       - name: Upload artifact
         uses: actions/upload-pages-artifact@v3
         with:
-          path: './dist/pokedex'  # Asegúrate de que esta es la salida correcta
+          path: ./dist/pokedex
 
       - name: Deploy to GitHub Pages
         id: deployment
