@@ -1,0 +1,12 @@
+section.speaker {
+  display: flex;
+  flex-direction: column;
+  gap: 4px;
+
+  & div {
+    background: #0E0856;
+    height: 6px;
+    width: 100px;
+    border-radius: 2px;
+  }
+}

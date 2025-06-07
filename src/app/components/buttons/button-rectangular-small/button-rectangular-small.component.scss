@@ -1,0 +1,15 @@
+button {
+  height: 10px;
+  width: 50px;
+  border-radius: 16px;
+  margin-bottom: 12px;
+  border: none;
+
+  &.green {
+    background: #2FF454;
+  }
+
+  &.orange {
+    background: #FB8E53;
+  }
+}

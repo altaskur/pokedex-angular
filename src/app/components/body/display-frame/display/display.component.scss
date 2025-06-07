@@ -1,0 +1,46 @@
+div.display {
+  --border-radius: 4px;
+
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  width: 100%;
+  height: 134px;
+  background: #00DBFD;
+  margin-top: 19px;
+  border-radius: var(--border-radius);
+  z-index: 1;
+  overflow: hidden;
+
+
+  & div.top-shadow {
+    position: absolute;
+    width: 100%;
+    height: 8px;
+    background: #1d7f8d;
+    border-radius: var(--border-radius) var(--border-radius) 0px 0px;
+    z-index: 1;
+  }
+
+  & .reflexion {
+    position: absolute;
+    width: 51px;
+    height: 322px;
+    background: rgba(255, 255, 255, 0.37);
+    transform: rotate(42deg) translate(-112px, -71px);
+
+    &.right {
+      width: 37px;
+      transform: rotate(42deg) translate(19px, -144px);
+
+    }
+  }
+
+
+  & div.pokemon-display {
+    width: 80px;
+    height: 120px;
+    background: #4D0B1C;
+  }
+}

@@ -1,0 +1,9 @@
+button {
+  --size: 50px;
+
+  height: var(--size);
+  width: var(--size);
+  background: #00ABF3;
+  border-radius: 50%;
+  border: 2px solid #0E0856;
+}
