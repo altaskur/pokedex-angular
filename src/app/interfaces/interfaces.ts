@@ -3,3 +3,8 @@ export enum LIGHTS_TYPE {
     GREEN = "GREEN",
     YELLOW = "YELLOW",
 }
+
+export enum buttonColors {
+    orange = 'orange',
+    green = 'green',
+}
