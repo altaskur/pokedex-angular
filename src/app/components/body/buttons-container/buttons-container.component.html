@@ -1,5 +1,19 @@
-<div>
-    <app-button-rounded-big/>
-    <app-button-rectangular-small [color]="buttonColors.green"/>
-    <app-button-rectangular-small [color]="buttonColors.orange"/>
-</div>
+<link rel="stylesheet" href="buttons-container.component.scss">
+<section class="buttons-container">
+
+    <div class="buttons-wrapper">
+        <div>
+            <app-button-rounded-big/>
+            <app-button-rectangular-small [color]="buttonColors.green"/>
+            <app-button-rectangular-small [color]="buttonColors.orange"/>
+        </div>
+
+        <div>
+            <app-button-rectangular-big [color]="buttonColors.yellow"/>
+        </div>
+    </div>
+
+    <div class="joystick">
+        <app-joystick/>
+    </div>
+</section>
