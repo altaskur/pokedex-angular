@@ -10,3 +10,10 @@ export enum buttonColors {
     yellow = 'yellow',
     red = 'red',
 }
+
+export enum TrianglePosition {
+    UP = 'up',
+    DOWN = 'down',
+    LEFT = 'left',
+    RIGHT = 'right'
+}
