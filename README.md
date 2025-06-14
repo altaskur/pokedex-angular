@@ -1,9 +1,22 @@
 # 📘 Pokédex Angular
 
-Este proyecto es una Pokédex desarrollada con [Angular](https://angular.io/) (v19.2.5) como práctica de diseño, estructura de componentes y despliegue en GitHub Pages.
+Este proyecto es una Pokédex desarrollada con [Angular](https://angular.io/) (v19.2.5) como práctica de diseño,
+estructura de componentes y despliegue en GitHub Pages.
 
 🔗 **Ver app en producción**:
 👉 [https://altaskur.live/pokedex-angular/](https://altaskur.live/pokedex-angular/)
+
+
+
+---
+
+## Funcionabilidades
+
+al mantener unos segundos el botón de encendido, se emitira un sonido, ademas de que cambia el brillo de la pantalla
+la luz principal se iluminara al son de sonido, y las luces de estado pasarán de rojo -> amarillo -> verde mientras
+tarde en ejecutarse este estado.
+
+una vez se encienda miraremos si el navegador tiene guardado algun pokemon, sino los descargará y los mostrará.
 
 ---
 
@@ -15,7 +28,8 @@ Lanza el servidor de desarrollo con:
 ng serve
 ```
 
-Abre tu navegador en `http://localhost:4200/`. La aplicación se recargará automáticamente al modificar cualquier archivo fuente.
+Abre tu navegador en `http://localhost:4200/`. La aplicación se recargará automáticamente al modificar cualquier archivo
+fuente.
 
 ---
 
@@ -57,7 +71,8 @@ ng test
 ng e2e
 ```
 
-> Angular no incluye framework de e2e por defecto. Puedes integrar uno como [Cypress](https://www.cypress.io/) o [Playwright](https://playwright.dev/) según tus necesidades.
+> Angular no incluye framework de e2e por defecto. Puedes integrar uno como [Cypress](https://www.cypress.io/)
+> o [Playwright](https://playwright.dev/) según tus necesidades.
 
 ---
 

@@ -1,0 +1,45 @@
+$background: #0E0856;
+$border-color: #1A2961;
+$size: 25px;
+
+section.triangle-icon {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: $size;
+  height: $size;
+  
+  & .visible {
+    $size: 12px ;
+
+    width: $size;
+    height: $size;
+    background: $border-color;
+    transform: rotate(45deg);
+  }
+
+  & .block {
+    position: absolute;
+    width: 11px;
+    height: 21px;
+    background: #0E0856;
+    z-index: 1;
+    transform: translate(5px, 0px);
+  }
+
+  &.left {
+    transform: translate(6px, -4px);
+  }
+
+  &.right {
+    transform: rotate(180deg) translate(0px, 4px);
+  }
+
+  &.up {
+    transform: rotate(90deg) translate(4px, -3px);
+  }
+
+  &.down {
+    transform: rotate(-90deg) translate(-1px, 4px)
+  }
+}
