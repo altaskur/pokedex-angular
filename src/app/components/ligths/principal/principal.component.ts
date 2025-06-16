@@ -1,4 +1,4 @@
-import {Component} from '@angular/core';
+import {Component, input} from '@angular/core';
 
 @Component({
     selector: 'app-principal-light',
@@ -7,5 +7,5 @@ import {Component} from '@angular/core';
     styleUrl: './principal.component.scss'
 })
 export class PrincipalComponent {
-
+    light_status = input.required<boolean>();
 }

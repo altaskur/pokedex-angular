@@ -1,7 +1,9 @@
-<div class="display">
+<div class="display" [class.off]="!light_status()">
     <div class="top-shadow"></div>
     <div class="reflexion left"></div>
     <div class="reflexion right"></div>
-    <div class="pokemon-display"></div>
-    <div class="pokemon-text">#25 Pikachu</div>
+    @if (light_status()) {
+        <div class="pokemon-display"></div>
+        <div class="pokemon-text">#25 Pikachu</div>
+    }
 </div>
