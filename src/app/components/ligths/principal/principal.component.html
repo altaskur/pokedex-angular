@@ -1,9 +1,9 @@
 <div class="principal">
     <div class="inside-up"></div>
     <div class="inside-down"></div>
-
+    {{ light_status() }}
     <div class="light-wrapper">
-        <div class="light">
+        <div class="light" [class.off]="!light_status()">
             <div class="reflexion top"></div>
             <div class="reflexion center"></div>
             <div class="light-shadow"></div>

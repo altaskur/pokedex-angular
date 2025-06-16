@@ -1,7 +1,7 @@
 div.principal {
   --size: 102px;
-  --light-color-on: #00DBFD;
-  --light-color-off: #1d7f8d;
+  --light-color-on: var(--blue-200);
+  --light-color-off: var(--blue-300);
 
   position: relative;
   width: var(--size);
@@ -44,9 +44,18 @@ div.principal {
       width: var(--size);
       height: var(--size);
       border-radius: 50%;
-      border: 4px solid #0E0856;
       background: var(--light-color-on);
+      border: 4px solid var(--border-color);
       overflow: hidden;
+      transition: background 0.3s ease;
+
+      &.off {
+        background: var(--light-color-off);
+
+        & div.light-shadow {
+          background: var(--light-color-off);
+        }
+      }
 
       & div.light-shadow {
         --size: 97%;
@@ -58,6 +67,7 @@ div.principal {
         height: var(--size);
         border-radius: 50%;
         background: var(--light-color-on);
+        transition: background 0.3s ease;
         transform: translate(-58%, -63%);
         z-index: 1;
       }

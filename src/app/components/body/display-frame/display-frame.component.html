@@ -1,11 +1,11 @@
 <section class="display-frame">
     <div class="display-wrapper">
-        <app-display/>
+        <app-display [light_status]="light_status()"/>
     </div>
 
 
     <div class="wrapper">
-        <app-button-rounded-small/>
+        <app-button-rounded-small (click)="handleClick()"/>
         <app-speaker/>
     </div>
 </section>
