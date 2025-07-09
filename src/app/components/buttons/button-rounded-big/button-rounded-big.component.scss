@@ -1,5 +1,11 @@
 button {
   --size: 50px;
+  --transition-shadow-duration: 0.1s;
+  --transition-border-duration: 0.1s;
+  --transition-out-shadow-duration: calc(var(--transition-shadow-duration) - 0.1s);
+  --transition-out-border-duration: calc(var(--transition-border-duration) - 0.1s);
+  --transition-in: box-shadow var(--transition-shadow-duration) ease-in 0s, border var(--transition-shadow-duration) ease-in 0s;
+  --transition-out: box-shadow var(--transition-out-shadow-duration) ease-in 0s, border var(--transition-shadow-duration) ease-in 0s;
 
   height: var(--size);
   width: var(--size);
@@ -7,4 +13,18 @@ button {
   border-radius: 50%;
   border: 2px solid #0E0856;
   box-shadow: 4px 4px 2px rgba(0 0 0 /53%);
+  
+  transition: var(--transition-out);
+
+  &:hover {
+    box-shadow: 3px 3px 2px rgba(0 0 0 / 55%);
+    border: 2.5px solid #0E0856;
+    transition: var(--transition-in);
+  }
+
+  &:active {
+    box-shadow: 2px 2px 1px rgba(0 0 0 / 60%);
+    border: 4px solid #0E0856;
+    transition: var(--transition-in);
+  }
 }
