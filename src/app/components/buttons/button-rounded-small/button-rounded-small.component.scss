@@ -1,9 +1,29 @@
 button {
   --size: 30px;
+  --transition-shadow-duration: 0.4s;
+  --transition-border-duration: 0.2s;
+  --transition-out-shadow-duration: calc(var(--transition-shadow-duration) - 0.1s);
+  --transition-out-border-duration: calc(var(--transition-border-duration) - 0.1s);
+  --transition-in: box-shadow var(--transition-shadow-duration) ease 0s, border var(--transition-border-duration) ease 0s;
+  --transition-out: box-shadow var(--transition-out-shadow-duration) ease 0s, border var(--transition-out-border-duration) ease 0s;
 
   width: var(--size);
   height: var(--size);
   background: #FD1956;
   border-radius: 50%;
   border: 2px solid #0E0856;
+  box-shadow: 2px 2px 2px rgba(0 0 0 / 45%);
+  transition: var(--transition-in);
+
+  &:hover {
+    box-shadow: 1px 1px 2px rgba(0 0 0 / 55%);
+    border: 2.5px solid #0E0856;
+    transition: var(--transition-out);
+  }
+
+  &:active {
+    box-shadow: 1px 1px 1px rgba(0 0 0 / 60%);
+    border: 3px solid #0E0856;
+    transition: var(--transition-out);
+  }
 }
