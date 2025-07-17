@@ -1,10 +1,18 @@
 button {
+  --transition-shadow-duration: 0.1s;
+  --transition-border-duration: 0.1s;
+  --transition-out-shadow-duration: calc(var(--transition-shadow-duration) - 0.1s);
+  --transition-out-border-duration: calc(var(--transition-border-duration) - 0.1s);
+  --transition-in: box-shadow var(--transition-shadow-duration) ease-in 0s, border var(--transition-shadow-duration) ease-in 0s;
+  --transition-out: box-shadow var(--transition-out-shadow-duration) ease-in 0s, border var(--transition-shadow-duration) ease-in 0s;
+
   height: 10px;
   width: 50px;
   border-radius: 16px;
   margin-bottom: 12px;
-  border: none;
+  border: 2px solid rgba(0 0 0 / 0%);
   box-shadow: 4px 4px 2px rgba(0 0 0 /53%);
+  transition: var(--transition-out);
 
   &.green {
     background: #2FF454;
@@ -12,5 +20,18 @@ button {
 
   &.orange {
     background: #FB8E53;
+  }
+
+  &:hover {
+    box-shadow: 3px 3px 2px rgba(0 0 0 / 55%);
+    border: 1px solid rgba(0 0 0 / 20%);
+    transition: var(--transition-in);
+
+  }
+
+  &:active {
+    box-shadow: 2px 2px 1px rgba(0 0 0 / 60%);
+    border: 2px solid rgba(0 0 0 / 20%);
+    transition: var(--transition-in);
   }
 }

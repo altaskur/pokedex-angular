@@ -1,11 +1,32 @@
 button {
+  --size: 50px;
+  --transition-shadow-duration: 0.1s;
+  --transition-border-duration: 0.1s;
+  --transition-out-shadow-duration: calc(var(--transition-shadow-duration) - 0.1s);
+  --transition-out-border-duration: calc(var(--transition-border-duration) - 0.1s);
+  --transition-in: box-shadow var(--transition-shadow-duration) ease-in 0s, border var(--transition-shadow-duration) ease-in 0s;
+  --transition-out: box-shadow var(--transition-out-shadow-duration) ease-in 0s, border var(--transition-shadow-duration) ease-in 0s;
+
   height: 36px;
   width: 136px;
   border-radius: 8px;
   margin-bottom: 12px;
-  border: none;
+  border: 2px solid rgba(0 0 0 / 0%);
+  transition: var(--transition-out);
 
   &.yellow {
     background: #FBF15A;
+  }
+
+  &:hover {
+
+    border: 2px solid rgba(0 0 0 / 20%);
+    transition: var(--transition-in);
+
+  }
+
+  &:active {
+    border: 4px solid rgba(0 0 0 / 20%);
+    transition: var(--transition-in);
   }
 }
