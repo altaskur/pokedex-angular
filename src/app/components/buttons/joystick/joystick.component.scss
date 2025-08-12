@@ -4,41 +4,104 @@ $cell-size: 32px;
 
 div.joystick {
   display: table;
-  filter: drop-shadow(7px 7px 2px rgba(0 0 0 /53%));
+
+  &:has(.cell.top:hover) {
+
+    & .cell.top {
+      border-width: 0.5px 1px 0 1px;
+      padding-top: 0.3px;
+      filter: drop-shadow(5px 3px 2px rgba(0 0 0 /53%));
+    }
+
+    & .cell.left {
+      border-width: 0.5px 0 4px 1px;
+      filter: drop-shadow(3px 10px 2px rgba(0 0 0 /53%));
+    }
+
+    & .cell.right {
+      border-width: 0.5px 1px 4px 0;
+      filter: drop-shadow(-1px 10px 2px rgba(0, 0, 0, 0.53));
+    }
+
+    & .cell.bottom {
+      border-width: 0px 1px 4px 1px;
+      filter: drop-shadow(5px 9px 2px rgba(0 0 0 /53%));
+    }
+  }
+
+  &:has(.cell.left:hover) {
+
+    & .cell.top {
+      border-width: 1px 4px 0 0.5px;
+      padding-top: 0.3px;
+      filter: drop-shadow(7px 3px 2px rgba(0 0 0 /53%));
+    }
+
+    & .cell.left {
+      border-width: 1px 0 1px 0.5px;
+      filter: drop-shadow(3px 5px 2px rgba(0 0 0 /53%));
+    }
+
+    & .cell.right {
+      border-width: 1px 4px 1px 0;
+      filter: drop-shadow(4px 1px 2px rgba(0, 0, 0, 0.53));
+    }
+
+    & .cell.bottom {
+      border-width: 0px 4px 1px 1px;
+      filter: drop-shadow(7px -1px 2px rgba(0 0 0 /53%));
+    }
+  }
 
   & div.row {
     display: table-row;
 
     & div.cell {
       display: table-cell;
+      position: relative;
       width: $cell-size;
       height: $cell-size;
       background: none;
 
+      &.interactive {
+        border-style: solid;
+        border-color: $border-color;
+        z-index: 3;
+        transition: all 0.1s ease;
+      }
+
       &.top {
         border-radius: 4px 4px 0 0;
+        border-width: 1px 1px 0 1px;
         background: $background;
+        filter: drop-shadow(7px 7px 2px rgba(0 0 0 /53%));
       }
 
       &.bottom {
         border-radius: 0 0 4px 4px;
+        border-width: 0 1px 1px 1px;
         background: $background;
+        filter: drop-shadow(7px 6px 2px rgba(0 0 0 /53%));
       }
 
       &.left {
         border-radius: 4px 0 0 4px;
+        border-width: 1px 0 1px 1px;
         background: $background;
+        filter: drop-shadow(7px 7px 2px rgba(0 0 0 /53%));
       }
 
       &.center {
         background: $background;
+        z-index: 4;
       }
 
       &.right {
         border-radius: 0 4px 4px 0;
+        border-width: 1px 1px 1px 0;
         background: $background;
+        filter: drop-shadow(-3px 7px 2px rgba(0, 0, 0, 0.53));
       }
-
     }
   }
 }

@@ -8,7 +8,7 @@ section.triangle-icon {
   align-items: center;
   width: $size;
   height: $size;
-  
+
   & .visible {
     $size: 12px ;
 
@@ -40,6 +40,6 @@ section.triangle-icon {
   }
 
   &.down {
-    transform: rotate(-90deg) translate(-1px, 4px)
+    transform: rotate(-90deg) translate(-1px, 3px)
   }
 }
